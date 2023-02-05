@@ -1,0 +1,6 @@
+{
+    "friends" : {
+        "getFriends": "https://rnapp-mock-developer-edition.ap24.force.com/services/apexrest/apiservice",
+        "makeFriend": "https://rnapp-mock-developer-edition.ap24.force.com/services/apexrest/apiservice"
+    }
+}
