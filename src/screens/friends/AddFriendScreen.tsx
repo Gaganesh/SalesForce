@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View,Alert, KeyboardAvoidingView, Image, TouchableOpacity } from "react-native"
+import { View,Alert, KeyboardAvoidingView, Image, TouchableOpacity, ScrollView } from "react-native"
 import { FAB } from 'react-native-elements';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import {friends} from "../../../services/urls.json";
@@ -87,6 +87,7 @@ const AddFriendScreen: React.FC<Props> = ({navigation}: Props) =>  {
 
   return (
     <KeyboardAvoidingView style={{flex:1}}>
+      <ScrollView>
         <TouchableOpacity onPress={onImagePick}>
         <Image source={ uri ? {uri:uri} : require('./../../assets/profile.jpeg')} style = {styles.profilePic}/>
         </TouchableOpacity>
@@ -98,6 +99,7 @@ const AddFriendScreen: React.FC<Props> = ({navigation}: Props) =>  {
         <AppButton label="Click Image" onSubmit={onCameraClick}/>
         </View>
         <AppButton label="Save" onSubmit={onSubmit}/>
+        </ScrollView>
     </KeyboardAvoidingView>
   )
 }
