@@ -11,7 +11,7 @@ interface Props {
   }
 const FriendListItem: React.FC<Props> = ({data, navigation}: Props) => {
     return (
-      <TouchableOpacity style={styles.itemView} onPress={() => navigation.navigate('AddFriends', {friendId: data?.Id})}>
+      <TouchableOpacity style={styles.itemView} onPress={() => navigation.navigate('AddFriends', {id: data?.Id})}>
         <Text style={styles.name} >{`Name : ${data.First_Name__c}`}</Text>
         <Text style={styles.other} >{`Age : ${data.Age__c}`}</Text>
       </TouchableOpacity>

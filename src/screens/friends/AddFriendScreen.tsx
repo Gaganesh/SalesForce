@@ -31,7 +31,7 @@ const galleryOptions = {
   quality: 1,
 };
 const AddFriendScreen: React.FC<Props> = ({route, navigation}: Props) => {
-  const friendId = route?.params.friendId;
+  const friendId = route?.params.id;
   const {friends} = useSelector((state: any) => ({
     friends: state.friend.friendsList,
   }));

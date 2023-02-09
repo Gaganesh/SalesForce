@@ -15,19 +15,28 @@ const linking = {
   config: {
     screens: {
       Home: {
-        path: 'home',
+        screens: {
+          Home: {
+            path: 'home',
+          },
+        },
       },
       Friends: {
-        path: 'friends',
-      },
-      AddFriends: {
-        path: 'addfriends/:id?',
-        parse: {
-          id: (id: String) => `${id}`,
+        screens: {
+          Friends: {
+            path: 'friends',
+          },
+          AddFriends: {
+            path: 'addfriends/:id?',
+          },
         },
       },
       Settings: {
-        path: 'settings',
+        screens: {
+          setting: {
+            path: 'setting',
+          },
+        },
       },
     },
   },
@@ -59,7 +68,7 @@ const FriendsStack = () => {
 };
 
 const RootNavigator = () => {
-  console.log("Linking url : ", Linking.getInitialURL());
+  console.log('Linking url : ', Linking.getInitialURL());
   return (
     <NavigationContainer
       linking={linking}
